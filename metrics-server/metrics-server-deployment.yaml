@@ -29,7 +29,7 @@ spec:
         emptyDir: {}
       containers:
       - name: metrics-server
-        image: k8s.gcr.io/metrics-server-amd64:v0.3.1
+        image: k8s.gcr.io/metrics-server-amd64:v0.3.1@sha256:78938f933822856f443e6827fe5b37d6cc2f74ae888ac8b33d06fdbe5f8c658b
         imagePullPolicy: Always
         args:
         - --kubelet-preferred-address-types=InternalIP

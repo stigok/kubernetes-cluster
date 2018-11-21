@@ -57,7 +57,7 @@ cat <<EOF > /etc/docker/daemon.json
 EOF
 ```
 
-### [Flannel][] (CNI)
+### [Flannel][] (CNI) v0.10.0
 
 ```bash
 kubectl apply -f flannel/
@@ -65,7 +65,7 @@ kubectl apply -f flannel/
 
 ## Cluster add-ons
 
-### [metrics-server][]
+### [metrics-server][] v0.3.1
 
 Must update *metrics-server-deployment.yaml* with the master node hostname
 and local IP before deploying.
