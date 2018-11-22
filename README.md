@@ -167,3 +167,5 @@ $ kubectl create clusterrolebinding root-cluster-admin-binding --clusterrole=clu
 [metrics-server]: https://github.com/kubernetes-incubator/metrics-server
 [Flannel]: https://github.com/coreos/flannel
 [ingress-nginx]: https://github.com/kubernetes/ingress-nginx
+[cert-manager]: https://github.com/jetstack/cert-manager
+[MetalLB]: https://github.com/google/metallb
