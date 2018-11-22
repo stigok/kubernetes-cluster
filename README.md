@@ -138,12 +138,31 @@ data:
 EOF
 ```
 
+## Useful commands
+
+### Create a new cluster user
+
+Run this on the master. Will output a complete kubectl configuration file.
+
+```
+$ kubeadm alpha phase kubeconfig user --client-name username
+```
+
+### Set cluster-admin role for user
+
+Run on master to give *username* cluster-admin privileges.
+
+```
+$ kubectl create clusterrolebinding root-cluster-admin-binding --clusterrole=cluster-admin --user=username
+```
+
 ## References
 - https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/
 - https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/
 - https://kubernetes.io/docs/setup/independent/troubleshooting-kubeadm/
 - https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet
 - https://github.com/kubernetes-incubator/metrics-server/issues/131#issuecomment-418613256
+- https://kubernetes.io/docs/reference/access-authn-authz/rbac/#permissive-rbac-permissions
 
 [metrics-server]: https://github.com/kubernetes-incubator/metrics-server
 [Flannel]: https://github.com/coreos/flannel
