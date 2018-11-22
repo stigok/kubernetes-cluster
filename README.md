@@ -145,7 +145,7 @@ EOF
 Run this on the master. Will output a complete kubectl configuration file.
 
 ```
-$ kubeadm alpha phase kubeconfig user --client-name username
+$ kubeadm alpha phase kubeconfig user --client-name <username>
 ```
 
 ### Set cluster-admin role for user
@@ -153,7 +153,7 @@ $ kubeadm alpha phase kubeconfig user --client-name username
 Run on master to give *username* cluster-admin privileges.
 
 ```
-$ kubectl create clusterrolebinding root-cluster-admin-binding --clusterrole=cluster-admin --user=username
+$ kubectl create clusterrolebinding root-cluster-admin-binding --clusterrole=cluster-admin --user=<username>
 ```
 
 ## References
