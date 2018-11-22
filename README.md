@@ -77,6 +77,13 @@ this work. The underlying issue should be fixed.
 $ kubectl create -f metrics-server/
 ```
 
+### [ingress-nginx][] v0.20.0
+
+Apply manifests
+
+```bash
+$ kubectl apply ingress-nginx/
+```
 
 ## References
 - https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/
@@ -87,3 +94,4 @@ $ kubectl create -f metrics-server/
 
 [metrics-server]: https://github.com/kubernetes-incubator/metrics-server
 [Flannel]: https://github.com/coreos/flannel
+[ingress-nginx]: https://github.com/kubernetes/ingress-nginx
