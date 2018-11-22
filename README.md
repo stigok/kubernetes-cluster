@@ -88,6 +88,44 @@ Apply manifests
 $ kubectl apply ingress-nginx/
 ```
 
+
+### [MetalLB][] v0.7.3
+
+Apply manifests
+
+```bash
+$ kubectl apply -f metallb/
+```
+
+Add Layer2 configuration to specify the pool of addresses your load balancers
+will pick from.
+
+The name of the pool can be whatever. Addresses is a list of ranges or single
+addresses or subnets in CIDR notation
+(e.g. `1.2.3.4/32`, `192.168.42.0/24` or `10.1.2.10-10.1.2.20`).
+
+**Scaleway:** Incoming traffic to VM's are *sent to the private IP address*,
+not the external one.
+
+Consult [https://metallb.universe.tf/configuration/]() for more information.
+
+```bash
+$ cat <<EOF | kubectl create -f -
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: metallb-system
+  name: config
+data:
+  config: |
+    address-pools:
+    - name: default
+      protocol: layer2
+      addresses:
+      - <address or subnet 1>
+EOF
+```
+
 ## References
 - https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/
 - https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/
