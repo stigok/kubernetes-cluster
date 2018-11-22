@@ -1,12 +1,12 @@
-# cluster
-
-My Kubernetes cluster bootstrap configuration
+My Kubernetes cluster bootstrap configuration.
+Following this guide from start to finish should get you a working cluster
+with all of the mentioned add-ons.
 
 Tested on Ubuntu 18.04 (Bionic Beaver)
 
 ## Cluster setup
 
-Save your node's local IP address to a variable before continuing.
+Determine and save your node's local IP address to a variable before continuing.
 
 ```
 export NODE_LOCAL_IP=<local ip>
