@@ -93,6 +93,11 @@ $ kubectl apply ingress-nginx/
 There's a [bug in cert-manager][] that requires you to disable client validation
 when applying the manifests.
 
+Requires manual intervention before deploying:
+- Update the `spec.acme.email` field of *90-letsencrypt-cluster-issuers.yaml*
+
+Creates `ClusterIssuer` resources for Let's Encrypt (production and staging).
+
 Apply manifests
 
 ```bash
@@ -163,6 +168,7 @@ $ kubectl create clusterrolebinding root-cluster-admin-binding --clusterrole=clu
 - https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet
 - https://github.com/kubernetes-incubator/metrics-server/issues/131#issuecomment-418613256
 - https://kubernetes.io/docs/reference/access-authn-authz/rbac/#permissive-rbac-permissions
+- https://cert-manager.readthedocs.io/en/latest/tutorials/acme/securing-nginx-ingress-with-letsencrypt.html
 
 [metrics-server]: https://github.com/kubernetes-incubator/metrics-server
 [Flannel]: https://github.com/coreos/flannel
