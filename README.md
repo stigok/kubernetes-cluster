@@ -67,6 +67,9 @@ kubectl apply -f flannel/
 
 ### [metrics-server][] v0.3.1
 
+This is required for node and pod stats for `kubectl top pod` and the
+dashboard.
+
 Must update *metrics-server-deployment.yaml* with the master node hostname
 and local IP before deploying.
 
