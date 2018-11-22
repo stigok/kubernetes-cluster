@@ -96,7 +96,7 @@ when applying the manifests.
 Apply manifests
 
 ```bash
-$ kubectl apply ingress-nginx/
+$ kubectl create -f cert-manager/ --validate=false
 ```
 
 [bug in cert-manager]: https://github.com/jetstack/cert-manager/issues/1034
