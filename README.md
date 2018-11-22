@@ -88,6 +88,18 @@ Apply manifests
 $ kubectl apply ingress-nginx/
 ```
 
+### [cert-manager][] v0.5.2
+
+There's a [bug in cert-manager][] that requires you to disable client validation
+when applying the manifests.
+
+Apply manifests
+
+```bash
+$ kubectl apply ingress-nginx/
+```
+
+[bug in cert-manager]: https://github.com/jetstack/cert-manager/issues/1034
 
 ### [MetalLB][] v0.7.3
 
